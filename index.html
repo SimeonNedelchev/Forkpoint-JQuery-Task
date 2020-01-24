@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Exam: Currency exchange rates</title>
+		<link rel="shortcut icon" href="icon-32.png"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="styles.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<img class="header-icon" src="icon-32.png"></img>
+			<h1>Exam: Currency exchange rates</h1>
+		</header>
+		<div class="main">
+			<div class="container">
+				<form class="exchange-rates-form">
+					<div class="row align-items-center">
+						<div class="col-4">
+							<div class="row align-items-center">
+								<label class="col-4 pr-0 m-0" for="base-currency">Get rates for: </label>
+								<div class="col-8 pl-0">
+									<select class="form-control" name="base-currency" id="base-currency">
+										<option value="">Select...</option>
+										<option value="EUR">EUR</option>
+										<option value="BGN">BGN</option>
+										<option value="USD">USD</option>
+										<option value="AUD">AUD</option>
+										<option value="GBP">GBP</option>
+										<option value="CAD">CAD</option>
+										<option value="JPY">JPY</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="currencies">
+								<div>Select currencies that you want to get the rates for:</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="EUR" id="eur"/>
+									<label class="form-check-label" for="eur">EUR</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="BGN" id="bgn"/>
+									<label class="form-check-label" for="bgn">BGN</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="USD" id="usd"/>
+									<label class="form-check-label" for="usd">USD</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="AUD" id="aud"/>
+									<label class="form-check-label" for="aud">AUD</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="GBP" id="gbp"/>
+									<label class="form-check-label" for="gbp">GBP</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="CAD" id="cad"/>
+									<label class="form-check-label" for="cad">CAD</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="JPY" id="jpy"/>
+									<label class="form-check-label" for="jpy">JPY</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-2">
+							<button class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+				<div class="row">
+					<div class="col-12 results">
+						<div class="exchange-rates-container">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Currency</th>
+										<th>Rate</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						<div class="error-message"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>

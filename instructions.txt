@@ -1,0 +1,17 @@
+Implement code that executes AJAX request to API. The API returns information about the currency exchange rates. The code should fill up a table with the exchange rates if the response is valid, otherwise it should display an error message.
+
+Instructions:
+1. write your code below the "SOLUTIONS" section in the main.js file. DO NOT edit any of the other files.
+2. there are 2 pre-defined variables in main.js:
+	- endpointURL - URL of the API which would be used for the request;
+	- testExchangeRates - example result object that is returned by the API. It can be used to create the logic for the filling of the table or just for reference.
+3. You can find info for the API here: https://exchangeratesapi.io/.
+4. go through the index.html file. In the upper part of it, there is a form that you should use for the request and on the bottom part, there is a container "results" (it will be used for filling up the result data) and an "error-message" block.
+
+Additional requirements:
+1. Show an error message "Please choose a currency first!" if the form is submitted but there is no currency selected.
+2. If the form is submitted and there is selected currency but no checkboxes are selected you should send request with URL that looks like this: "GET https://api.exchangeratesapi.io/latest?base=USD" (the value for "base" key is the selected currency).
+3. If the form is submitted and there is selected currency and selected checkboxes you should send request with URL that looks like this: "https://api.exchangeratesapi.io/latest?base=USD&symbols=USD,GBP" (the value for "symbols" key contains the selected checkbox values).
+4. Display the table with filled up currencies and rates taken from the response on successful request.
+5. Display an error message if the request has failed.
+
